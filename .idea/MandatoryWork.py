@@ -1,5 +1,5 @@
 def main():
-    temp()
+    quiz()
     return
 answer = {}
 points = 0
@@ -20,7 +20,7 @@ def login_info(my_dict, loginAttempt, passwordAttempt):
 
 
 
-def temp():
+def quiz():
     my_dict = {"PGR107":"Python"}
     running = True
 
@@ -46,6 +46,7 @@ def temp():
 
 
 def Q1():
+    global points
     print("what is the capital of Norway?")
     print("a: Bergen\nb: Oslo\nc: Stavanger\nd: Trondheim")
     userInput = input().lower()
@@ -57,6 +58,7 @@ def Q1():
     print("what is the capital of Norway?")
     return
 def Q2():
+    global points
     print("What is the currency of Norway?")
     print("a: Euro\nb: Pound\nc: Krone\nd: Deutsche Mark")
     userInput = input().lower()
@@ -67,6 +69,7 @@ def Q2():
         points += 1
     return
 def Q3():
+    global points
     print("What is the largest city in Norway?")
     print("a: Oslo\nb: Stavanger\nc: Bergen\nd: Trondheim")
     userInput = input().lower()
@@ -77,6 +80,7 @@ def Q3():
         points += 1
     return
 def Q4():
+    global points
     print("When is constitution day (the national day) of Norway?")
     print("a: 27th May\nb: 17th May\nc: 17th April\nd: 27th April")
     user = input().lower()
@@ -88,6 +92,7 @@ def Q4():
         points += 1
     return
 def Q5():
+    global points
     print("What color is the background of the Norwegian flag?")
     print("a: Red\nb: White\nc: Blue\nd: Yellow")
     userInput = input().lower()
@@ -98,6 +103,7 @@ def Q5():
         points += 1
     return
 def Q6():
+    global points
     print("How many countries does Norway border?")
     print("a: 1\nb: 2\nc: 3\nd: 4")
     userInput = input().lower()
@@ -108,6 +114,7 @@ def Q6():
         points += 1
     return
 def Q7():
+    global points
     print("What is the name of the university in Trondheim?")
     print("a: UiS\nb: UiO\nc: NMBU\nd: NTNU")
     userInput = input().upper()
@@ -118,6 +125,7 @@ def Q7():
         points += 1
     return
 def Q8():
+    global points
     print("How long is the border between Norway and Russia?")
     print("a: 96 Km\nb: 196 Km\nc: 296 Km\nd: 396 Km")
     user = input().lower()
@@ -129,6 +137,7 @@ def Q8():
         points += 1
     return
 def Q9():
+    global points
     print("Where in Norway is Stavanger?")
     print("a: North Km\nb: South\nc: South-west\nd: South-east")
     user = input().lower()
@@ -141,6 +150,7 @@ def Q9():
         points += 1
     return
 def Q10():
+    global points
     print("From which Norwegian city did the world’s famous composer Edvard Grieg come?")
     print("a: Oslo\nb: Bergen\nc: Stavanger\nd: Tromø")
     userInput = input().upper()
@@ -152,6 +162,7 @@ def Q10():
     return
 
 def result():
+    global points
     print("result: ")
     for i, item in enumerate(answer):
         if i == 0:
