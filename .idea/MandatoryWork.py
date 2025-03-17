@@ -1,7 +1,7 @@
 def main():
     quiz()
     return
-answer = {}
+answer = []
 points = 0
 def login_info(my_dict, loginAttempt, passwordAttempt):
     for item in my_dict:
@@ -51,7 +51,7 @@ def Q1():
     print("what is the capital of Norway?")
     print("a: Bergen\nb: Oslo\nc: Stavanger\nd: Trondheim")
     userInput = input().lower()
-    answer = userInput
+    answer.append(userInput)
     correct_Answer = "oslo"
     correct_Answer2 = "b"
     if userInput == correct_Answer or userInput == correct_Answer2:
@@ -64,7 +64,7 @@ def Q2():
     print("What is the currency of Norway?")
     print("a: Euro\nb: Pound\nc: Krone\nd: Deutsche Mark")
     userInput = input().lower()
-    answer = userInput
+    answer.append(userInput)
     correct_Answer = "krone"
     correct_Answer2 = "c"
     if userInput == correct_Answer or userInput == correct_Answer2:
@@ -76,7 +76,7 @@ def Q3():
     print("What is the largest city in Norway?")
     print("a: Oslo\nb: Stavanger\nc: Bergen\nd: Trondheim")
     userInput = input().lower()
-    answer = userInput
+    answer.append(userInput)
     correct_Answer = "oslo"
     correct_Answer2 = "a"
     if userInput == correct_Answer or userInput == correct_Answer2:
@@ -88,7 +88,7 @@ def Q4():
     print("When is constitution day (the national day) of Norway?")
     print("a: 27th May\nb: 17th May\nc: 17th April\nd: 27th April")
     user = input().lower()
-    answer = user
+    answer.append(user)
     userInput =user.replace(" ", "")
     correct_Answer = "17thmay"
     correct_Answer2 = "b"
@@ -101,7 +101,7 @@ def Q5():
     print("What color is the background of the Norwegian flag?")
     print("a: Red\nb: White\nc: Blue\nd: Yellow")
     userInput = input().lower()
-    answer = userInput
+    answer.append(userInput)
     correct_Answer = "red"
     correct_Answer2 = "a"
     if userInput == correct_Answer or userInput == correct_Answer2:
@@ -113,7 +113,7 @@ def Q6():
     print("How many countries does Norway border?")
     print("a: 1\nb: 2\nc: 3\nd: 4")
     userInput = input().lower()
-    answer = userInput
+    answer.append(userInput)
     correct_Answer = "3"
     correct_Answer2 = "c"
     if userInput == correct_Answer or userInput == correct_Answer2:
@@ -125,7 +125,7 @@ def Q7():
     print("What is the name of the university in Trondheim?")
     print("a: UiS\nb: UiO\nc: NMBU\nd: NTNU")
     userInput = input().upper()
-    answer = userInput
+    answer.append(userInput)
     correct_Answer = "NTNU"
     correct_Answer2 = "C"
     if userInput == correct_Answer or userInput == correct_Answer2:
@@ -137,7 +137,7 @@ def Q8():
     print("How long is the border between Norway and Russia?")
     print("a: 96 Km\nb: 196 Km\nc: 296 Km\nd: 396 Km")
     user = input().lower()
-    answer = user
+    answer.append(user)
     userInput = user.replace(" ","")
     correct_Answer = "196km"
     correct_Answer2 = "b"
@@ -150,7 +150,7 @@ def Q9():
     print("Where in Norway is Stavanger?")
     print("a: North Km\nb: South\nc: South-west\nd: South-east")
     user = input().lower()
-    answer = user
+    answer.append(user)
     userInput = user.replace(" ","")
     correct_Answer = "south-west"
     correct_Answer2 = "c"
@@ -164,7 +164,7 @@ def Q10():
     print("From which Norwegian city did the world’s famous composer Edvard Grieg come?")
     print("a: Oslo\nb: Bergen\nc: Stavanger\nd: Tromø")
     userInput = input().upper()
-    answer = userInput
+    answer.append(userInput)
     correct_Answer = "bergen"
     correct_Answer2 = "b"
     if userInput == correct_Answer or userInput == correct_Answer2:
@@ -177,36 +177,37 @@ def result():
     for i, item in enumerate(answer):
         if i == 0:
             print("question: what is the capital of Norway?")
-            print(f"your answer: {item}\ncorrect answer: Oslo")
+            print(f"your answer: {item}\ncorrect answer: Oslo\n")
         elif i == 1:
             print("question: What is the currency of Norway?")
-            print(f"your answer: {item}\ncorrect answer: Krone")
+            print(f"your answer: {item}\ncorrect answer: Krone\n")
         elif i == 2:
             print("question: What is the largest city in Norway?")
-            print(f"your answer: {item}\ncorrect answer: Oslo")
+            print(f"your answer: {item}\ncorrect answer: Oslo\n")
         elif i == 3:
             print("question: When is constitution day (the national day) of Norway?")
-            print(f"your answer: {item}\ncorrect anser: 17thmay")
+            print(f"your answer: {item}\ncorrect anser: 17thmay\n")
         elif i == 4:
             print("question: What color is the background of the Norwegian flag?")
-            print(f"your answer {item}\ncorrect answer: Red")
+            print(f"your answer {item}\ncorrect answer: Red\n")
         elif i == 5:
             print("question: How many countries does Norway border?")
-            print(f"your answer {item}\ncorrect answer: 3")
+            print(f"your answer {item}\ncorrect answer: 3\n")
         elif i == 6:
             print("question: What is the name of the university in Trondheim?")
-            print(f"your answer {item}\ncorrect answer: NTNU")
+            print(f"your answer {item}\ncorrect answer: NTNU\n")
         elif i == 7:
             print("question: How long is the border between Norway and Russia?")
-            print(f"your answer: {item}\ncorrect answer: 196 Km")
+            print(f"your answer: {item}\ncorrect answer: 196 Km\n")
         elif i == 8:
             print("question: Where in Norway is Stavanger?")
-            print(f"your answer: {item}\ncorrect answer: South-west")
+            print(f"your answer: {item}\ncorrect answer: South-west\n")
 
         elif i == 9:
             print("question: From which Norwegian city did the world’s famous composer Edvard Grieg come?")
-            print(f"your answer: {item}\ncorrect answer: Bergen")
+            print(f"your answer: {item}\ncorrect answer: Bergen\n")
     print(f"total amounts of points: {points}/10")
+    print(f"total amount of incorrect answer: {10 - points}/10")
     print("thanks for participating on this quiz")
     return
 if __name__ == "__main__":
