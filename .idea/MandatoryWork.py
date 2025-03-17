@@ -55,7 +55,6 @@ def Q1():
     if userInput == correct_Answer or userInput == correct_Answer2:
         points += 1
     print("what is the capital of Norway?")
-    print(f"your answer: {userInput}\ncorrect answer: {correct_Answer2}. {correct_Answer}\npoints: {points}/10")
     return
 def Q2():
     print("inni q2")
