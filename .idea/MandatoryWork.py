@@ -38,6 +38,7 @@ def temp():
             Q8()
             Q9()
             Q10()
+            result()
             running = False
         else:
             continue
