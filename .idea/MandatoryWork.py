@@ -9,11 +9,11 @@ def login_info(my_dict, loginAttempt, passwordAttempt):
                 print("login succesfull")
                 return True
             else:
-                print("wrong password")
+                print("wrong password. try again")
                 return False
 
         else:
-            print("user not found")
+            print("user not found. try again")
             return  False
 
 
@@ -22,20 +22,30 @@ def login_info(my_dict, loginAttempt, passwordAttempt):
 def temp():
     my_dict = {"PGR107":"Python"}
     running = True
-    while running == True:
 
+    while running == True:
         loginAttempt = input("enter your user name: ")
         passwordAttempt = input("enter your password: ")
-        login_info(my_dict,loginAttempt,passwordAttempt)
-        if login_info() == True:
+        if login_info(my_dict,loginAttempt,passwordAttempt) == True:
             Q1()
-        running = False
-
+            Q2()
+            Q3()
+            Q4()
+            Q5()
+            Q6()
+            Q7()
+            Q8()
+            Q9()
+            Q10()
+            running = False
+        else:
+            continue
     return
 
 
 def Q1():
     print("inni q1")
+    userInput = input()
     return
 def Q2():
     print("inni q2")
