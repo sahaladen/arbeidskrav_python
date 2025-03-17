@@ -1,7 +1,8 @@
 def main():
     temp()
     return
-
+answer = {}
+points = 0
 def login_info(my_dict, loginAttempt, passwordAttempt):
     for item in my_dict:
         if loginAttempt in my_dict:
@@ -45,7 +46,16 @@ def temp():
 
 def Q1():
     print("inni q1")
-    userInput = input()
+    print("what is the capital of Norway?")
+    print("a: Bergen\nb: Oslo\nc: Stqavanger\nd: Trondheim")
+    userInput = input().lower()
+    answer = userInput
+    correct_Answer = "oslo"
+    correct_Answer2 = "b"
+    if userInput == correct_Answer or userInput == correct_Answer2:
+        points += 1
+    print("what is the capital of Norway?")
+    print(f"your answer: {userInput}\ncorrect answer: {correct_Answer2}. {correct_Answer}\npoints: {points}/10")
     return
 def Q2():
     print("inni q2")
